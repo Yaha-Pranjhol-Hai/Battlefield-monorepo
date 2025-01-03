@@ -1,12 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "battlefield4-server-info/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "battlefield4-server-info/build"
-      }
-    }
-  ]
+  "version": 2
 }
