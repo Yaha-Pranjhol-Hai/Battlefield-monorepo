@@ -1,10 +1,12 @@
+// server.js
 const express = require('express');
 const cors = require('cors');
 const app = express();
 
 app.use(cors());
 
-app.get('/api/server-info', (req, res) => {
+// Move route to root level for Vercel
+app.get('/server-info', (req, res) => {
   const serverData = {
     title: 'NASA Multiplayer Server',
     description: 'An epic battle for survival',
@@ -37,9 +39,4 @@ app.get('/api/server-info', (req, res) => {
   res.json(serverData);
 });
 
-// **Export the app as a Vercel function:**
-module.exports = (req, res) => {
-  app(req, res); // This runs the express app for Vercel to handle
-};
-
-// Note: No need to call `app.listen()`, as Vercel handles the HTTP requests automatically.
+module.exports = app;
