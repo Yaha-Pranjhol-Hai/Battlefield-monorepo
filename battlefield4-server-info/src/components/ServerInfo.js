@@ -11,13 +11,15 @@ export default function ServerInfo() {
 
   useEffect(() => {
     axios.get(`${API_URL}/server-info`, {
-      headers: { 
-        'Content-Type': 'application/json'
-      }
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true, // Include credentials for cookies
     })
     .then(response => setServerData(response.data))
-    .catch(error => console.error('Error:', error));
+    .catch(error => setError(error.message));
   }, []);
+  
 
   if (error) return <div>{error}</div>;
   if (!serverData) return <div>Loading...</div>;

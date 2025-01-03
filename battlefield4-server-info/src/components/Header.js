@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { IoIosArrowBack } from 'react-icons/io';
 export const API_URL = 'https://battlefield4-monorepo-backend.vercel.app';
 
@@ -11,14 +12,13 @@ const Header = () => {
   });
 
   useEffect(() => {
-    fetch(`${API_URL}/server-info`, {
-      headers: {
+    axios.get(`${API_URL}/server-info`, {
+      headers: { 
         'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(data => setServerInfo(data))
-    .catch(error => console.error('Error:', error));
+      },
+      withCredentials: true,
+    });
+    
   }, []);
 
   return (

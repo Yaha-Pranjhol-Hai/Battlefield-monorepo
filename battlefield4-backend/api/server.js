@@ -8,8 +8,8 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
@@ -18,8 +18,8 @@ app.use(cors({
   credentials: true
 }));
 
+app.use(express.json()); // Handle JSON body parsing
 
-// Move route to root level for Vercel
 app.get('/server-info', (req, res) => {
   const serverData = {
     title: 'NASA Multiplayer Server',
@@ -51,6 +51,14 @@ app.get('/server-info', (req, res) => {
     ]
   };
   res.json(serverData);
+});
+
+app.use((err, req, res, next) => {
+  if (err.message === 'Not allowed by CORS') {
+    res.status(403).json({ error: 'CORS error', message: err.message });
+  } else {
+    next(err);
+  }
 });
 
 module.exports = app;
