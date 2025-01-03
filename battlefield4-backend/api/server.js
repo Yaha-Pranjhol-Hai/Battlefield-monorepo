@@ -37,8 +37,9 @@ app.get('/api/server-info', (req, res) => {
   res.json(serverData);
 });
 
-// Export as Vercel function (serverless handler)
-module.exports = app;
+// **Export the app as a Vercel function:**
+module.exports = (req, res) => {
+  app(req, res); // This runs the express app for Vercel to handle
+};
 
-// const port = 5000;
-// app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+// Note: No need to call `app.listen()`, as Vercel handles the HTTP requests automatically.
