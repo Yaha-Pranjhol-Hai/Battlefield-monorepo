@@ -1,15 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "battlefield4-backend/server.js", 
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/server-info",
-      "dest": "battlefield4-backend/server.js"
-    }
-  ]
+  "version": 2
 }
