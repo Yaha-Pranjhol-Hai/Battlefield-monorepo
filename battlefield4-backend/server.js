@@ -3,7 +3,12 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://battlefield-monorepo-oklwgpj73-pranjal-jain-projects-a2a166e4.vercel.app/'],
+  methods: ['GET'],
+  credentials: true
+}));
+
 
 // Move route to root level for Vercel
 app.get('/server-info', (req, res) => {

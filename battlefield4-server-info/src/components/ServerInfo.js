@@ -9,7 +9,13 @@ export default function ServerInfo() {
 
   useEffect(() => {
     axios
-      .get('https://battlefield4-monorepo-backend.vercel.app/server-info')
+      .get('https://battlefield4-monorepo-backend.vercel.app/server-info', {
+        withCredentials: true,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
       .then((response) => {
         setServerData(response.data);
       })
