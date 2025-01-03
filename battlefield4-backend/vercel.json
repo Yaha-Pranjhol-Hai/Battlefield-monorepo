@@ -2,21 +2,21 @@
   "rewrites": [
     {
       "source": "/api/(.*)", 
-      "destination": "/api/server.js"  
+      "destination": "/api/server.js"
     },
     {
-      "source": "/(.*)",  
-      "destination": "/"  
+      "source": "/(.*)", 
+      "destination": "/index.html"
     }
   ],
   "builds": [
     {
       "src": "api/server.js",
-      "use": "@vercel/node" 
+      "use": "@vercel/node"
     },
     {
-      "src": "index.js",
-      "use": "@vercel/static-build" 
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
   ]
 }
