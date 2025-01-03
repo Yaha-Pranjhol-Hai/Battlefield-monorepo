@@ -1,5 +1,5 @@
 import React from 'react';
-import './assets/styles.css';
+import '../src/';
 import ServerInfoPage from './pages/ServerInfoPage';
 
 const App = () => {

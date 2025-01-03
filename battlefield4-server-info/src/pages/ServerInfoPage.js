@@ -1,15 +1,13 @@
 import React from 'react';
 import Header from '../components/Header'; // Assuming you have a Header component
-import '../assets/styles.css'; // Importing styles for your components
+import '../styles.css'; // Importing styles for your components
 import ServerInfo from '../components/ServerInfo';
 
 const ServerInfoPage = () => {
-  const backgroundImage = '/assets/server-background.png'; // Path to the image in the public folder
-
   return (
     <div
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url("/assets/server-background.png")`, // Use the relative path from `public`
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
