@@ -1,0 +1,154 @@
+/* Reset body styling */
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif; /* Set Rajdhani as the default font */
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Server info page container */
+.server-info-page {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header positioning */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px; /* Add padding around the header */
+  z-index: 1000;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Align content in column */
+  padding-left: 20px; /* Extra padding on the left for better spacing */
+  padding-right: 20px; /* Extra padding on the right */
+  box-sizing: border-box;
+}
+
+/* Header Top: Chevron Button and Title */
+.header-top {
+  display: flex;
+  align-items: center; /* Align items in a row */
+  gap: 10px; /* Space between chevron button and title */
+}
+
+/* Chevron Button Styles */
+.chevron-button {
+  background: transparent;
+  border: none;
+  color: gray;
+  font-size: 24px; /* Chevron icon size */
+  cursor: pointer;
+  padding: 3px;
+  transition: 0.3s ease;
+}
+
+.chevron-button:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+/* Main header text style */
+.main-header {
+  font-size: 18px; /* Reduced font size */
+  font-weight: normal; /* Regular weight for the main header */
+  margin: 0;
+  padding: 0; /* Remove default padding */
+}
+
+/* Server Info Title */
+.server-info-title {
+  font-size: 32px; /* Larger font for "SERVER INFO" */
+  font-weight: bold; /* Make it bold */
+  margin: 0;
+  padding: 0; /* Remove default padding */
+}
+
+/* For h1 and h2 alignment */
+.header h1,
+.header h2 {
+  margin: 0;
+  line-height: 1.2; /* Adjust line-height for tighter alignment */
+}
+
+/* Optional styling for the flag icon */
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+/* Space below header for content */
+.server-info-container {
+  margin-top: 120px; /* This creates space for the fixed header */
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for button containers */
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+/* Default button styles */
+.transparent-button {
+  background-color: transparent;
+  border: 2px solid grey;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for buttons */
+.transparent-button:hover {
+  background-color: white;
+  border: 0.2px solid transparent;
+}
+
+.transparent-button:hover .server__button-text {
+  color: black;
+}
+
+/* Flexbox for stats section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+/* Ensure buttons fit well on smaller screens */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transparent-button {
+    width: 80%; /* Make buttons smaller on mobile */
+  }
+}
