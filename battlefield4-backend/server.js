@@ -37,5 +37,8 @@ app.get('/api/server-info', (req, res) => {
   res.json(serverData);
 });
 
-const port = 5000;
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+// Export as Vercel function (serverless handler)
+module.exports = app;
+
+// const port = 5000;
+// app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
