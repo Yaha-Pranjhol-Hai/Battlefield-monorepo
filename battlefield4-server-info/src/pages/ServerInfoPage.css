@@ -14,7 +14,8 @@
   
   /* Space below header for content */
   .server-info-container {
-    margin-top: 120px;
+    margin-top: 80px;
+    padding-left: 20px;
     margin-bottom: 40px;
     width: 100%;
     display: flex;

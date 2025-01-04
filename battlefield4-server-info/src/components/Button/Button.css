@@ -46,3 +46,21 @@
     width: 80%; /* Make buttons take 80% of the screen width */
   }
 }
+
+/* Hover effect for table rows (tr) */
+table tr:hover {
+  background-color: white;  /* Changes background color on hover */
+  border: 0.2px solid transparent; /* Adjust the border as in button hover */
+  cursor: pointer;  /* Changes cursor to pointer to indicate interactivity */
+}
+
+/* Optional: To change text color on hover (similar to the button text hover) */
+table tr:hover td {
+  color: black;  /* Changes text color to black when row is hovered */
+}
+
+/* Ensure the default text color remains white */
+table td {
+  color: white;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}

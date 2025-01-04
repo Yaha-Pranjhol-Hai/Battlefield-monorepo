@@ -2,6 +2,7 @@
 .header {
     position: relative;
     width: 100%;
+    padding-left: 20px;
     padding-top: 20px; /* Add some space around the header */
     color: white;
     box-sizing: border-box;
@@ -43,7 +44,6 @@
 /* Server Info Title */
 .server-info-title {
   font-size: 46px; /* Larger font for "SERVER INFO" */
-  font-weight: semi-bold; /* Make it bold */
   margin: 0;
 }
 
