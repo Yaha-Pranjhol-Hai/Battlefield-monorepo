@@ -2,27 +2,21 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Stats from './Stats';
 import Button from './Button';
+export const API_URL = 'https://battlefield4-monorepo-backend.vercel.app';
 
 export default function ServerInfo() {
   const [serverData, setServerData] = useState(null);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
-    axios
-      .get('https://battlefield4-monorepo-backend.vercel.app/server-info', {
-        withCredentials: true,
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      })
-      .then((response) => {
-        setServerData(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setError('Failed to load server data');
-      });
+    axios.get(`${API_URL}/server-info`, {
+      headers: { 
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => setServerData(response.data))
+    .catch(error => console.error('Error:', error));
   }, []);
 
   if (error) return <div>{error}</div>;
