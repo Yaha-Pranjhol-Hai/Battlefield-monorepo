@@ -1,0 +1,56 @@
+.server-info-flag-desc {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between the flag and text */
+    padding: 10px; /* Adds padding to the entire line */
+  }
+  
+  .flag-icon {
+    width: 20px; /* Adjust width of the flag */
+    height: 12px; /* Adjust height of the flag */
+    object-fit: cover; /* Ensures the flag maintains proper proportions */
+  }
+  
+  .server-info-title {
+    color: white;
+    font-size: 36px; /* Increase font size for the title */
+    font-weight: 500; /* Semi-bold font weight */
+  }
+  
+  .server-info-desc {
+    color: white;
+    font-size: 18px; /* Sets the font size to 10px */
+    font-weight:300; /* Semi-bold font weight */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .server-info-content {
+    color: white;
+    font-size: 18px; /* Sets the font size to 18px */
+    font-weight: 300; /* Semi-bold font weight */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .star-icon {
+    margin-right: 8px; /* Adds space between the star and the number */
+    font-size: 20px; /* Adjust size as needed */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+  
+  .star-button-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    color: white; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+
+.transparent-button:hover .star-button-text {
+    color: black;
+  }
+  
+  .transparent-button:hover .star-icon {
+    color: black; /* Change the color of the star on hover */
+  }
+  

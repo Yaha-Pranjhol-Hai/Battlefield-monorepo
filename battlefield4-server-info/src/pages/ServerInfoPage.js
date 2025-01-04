@@ -1,7 +1,9 @@
 import React from 'react';
-import Header from '../components/Header'; // Assuming you have a Header component
+import Header from '../components/Header/Header'; // Assuming you have a Header component
 import '../styles.css'; // Importing styles for your components
-import ServerInfo from '../components/ServerInfo';
+import ServerInfo from '../components/ServerInfo/ServerInfo';
+import './ServerInfoPage.css'; // For Server Info Page component
+
 
 const ServerInfoPage = () => {
   return (

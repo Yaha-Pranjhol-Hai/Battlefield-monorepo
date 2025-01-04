@@ -23,8 +23,8 @@ app.use(cors({
 // Move route to root level for Vercel
 app.get('/server-info', (req, res) => {
   const serverData = {
-    title: 'NASA Multiplayer Server',
-    description: 'An epic battle for survival',
+    title: '#1| NASA | Noobs Welcome | Conquest 40Hz',
+    description: 'Server protected by The_K-50 AntiCheat. Vip !Rules, Questions, Request, Appeal, Visit us: www.epg.gg | Discord: https://discord.gg/3r5NK4d',
     serverDetails: {
       players: { current: 32, max: 64 },
       ping: 47,

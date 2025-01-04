@@ -1,0 +1,48 @@
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 8px; /* Space between buttons */
+  margin: 34px 0;
+}
+
+/* Default Button Styles */
+.transparent-button {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700; /* Use bold weight for Rajdhani */
+  cursor: pointer;
+  width: 324px;
+  height: 56px;
+  font-family: 'Rajdhani', sans-serif; /* Apply Rajdhani font */
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transparent-button:hover {
+  background-color: white;
+  border: 0.2px solid transparent;
+}
+
+.transparent-button:hover .server__button-text {
+  color: black;
+}
+
+
+/* Ensure buttons fit well on smaller screens */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+  }
+
+  .transparent-button {
+    width: 80%; /* Make buttons take 80% of the screen width */
+  }
+}

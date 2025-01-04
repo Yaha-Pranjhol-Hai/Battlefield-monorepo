@@ -1,0 +1,11 @@
+/* Flexbox for stats section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .stats div {
+    text-align: center;
+  }
+  

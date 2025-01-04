@@ -1,0 +1,56 @@
+/* Header container */
+.header {
+    position: relative;
+    width: 100%;
+    padding-top: 20px; /* Add some space around the header */
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header Top: Chevron Button and Title */
+.header-top {
+  display: flex;
+  align-items: center; /* Align items in a row */
+  gap: 10px; /* Space between chevron button and title */
+}
+
+
+/* Chevron Button Styles */
+.chevron-button {
+  background: transparent;
+  border: none;
+  color: gray;
+  font-size: 24px; /* Chevron icon size */
+  cursor: pointer;
+  padding: 3px;
+  transition: 0.3s ease;
+}
+
+.chevron-button:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+/* Main header text style */
+.main-header {
+  font-size: 18px; /* Reduced font size */
+  font-weight: normal; /* Regular weight for the main header */
+  margin: 0;
+  padding: 0; /* Remove default padding */
+}
+
+/* Server Info Title */
+.server-info-title {
+  font-size: 46px; /* Larger font for "SERVER INFO" */
+  font-weight: semi-bold; /* Make it bold */
+  margin: 0;
+}
+
+  /* Styling for the flag icon */
+  .flag-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+  }
+
