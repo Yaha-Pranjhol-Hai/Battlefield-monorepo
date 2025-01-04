@@ -1,0 +1,54 @@
+.map-component {
+  position: relative;
+  width: 324px; /* Fixed width */
+  height: 178px; /* Fixed height */
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.map-image-container {
+  height: 76px; /* Fixed height for the image */
+  overflow: hidden;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.map-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack the text vertically */
+  align-items: flex-start; /* Align text to the left */
+  justify-content: center; /* Center vertically */
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay initially */
+  color: white; /* White text initially */
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  padding-left: 23px;
+}
+
+.map-title span {
+  display: block; /* Ensures the title and name are in separate lines */
+  font-size: 14px; /* Slightly smaller font size for the map name */
+}
+
+
+/* Hover effects */
+.map-component:hover .map-image {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.map-component:hover .map-title {
+  background-color: white; /* Change background to white */
+  color: black; /* Change text to black */
+}

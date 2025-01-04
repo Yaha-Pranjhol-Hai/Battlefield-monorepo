@@ -42,6 +42,7 @@
 .additional-details {
   display: flex;
   flex-wrap: wrap; /* Ensure elements wrap in smaller screens */
+  padding-bottom: 30px;
 }
 
 /* Enable horizontal scroll for settings, advanced, and rules */
@@ -52,6 +53,8 @@
 h4 {
   font-size: 1.2em;
   margin-bottom: 10px;
+  font-weight: 500;
+
 }
 
 table {

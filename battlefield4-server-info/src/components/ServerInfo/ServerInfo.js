@@ -4,6 +4,7 @@ import Stats from '../Stats/Stats';
 import Button from '../Button/Button';
 import '../ServerInfo/ServerInfo.css';
 import { FaStar } from 'react-icons/fa';
+import MapComponent from '../MapComponent/MapComponent';
 export const API_URL = process.env.REACT_APP_API_URL;
 
 export default function ServerInfo() {
@@ -54,6 +55,25 @@ export default function ServerInfo() {
         </Button>
       </div>
       <Stats />
+
+      <p className="map-info">
+          MAP ROTATION
+        </p>
+      <div className="map-list">
+        <MapComponent imageSrc="/assets/1.png" title="CONQUEST LARGE DAWNBREAKER" />
+        <MapComponent imageSrc="/assets/2.png" title="CONQUEST LARGE PROPAGANDA" />
+        <MapComponent imageSrc="/assets/3.png" title="CONQUEST LARGE OPERATION LOCKER" />
+        <MapComponent imageSrc="/assets/4.png" title="CONQUEST LARGE LANCANG DAM" />
+        <MapComponent imageSrc="/assets/4.png" title="CONQUEST LARGE DAWNBREAKER" />
+        <MapComponent imageSrc="/assets/3.png" title="CONQUEST LARGE PROPAGANDA" />
+        <MapComponent imageSrc="/assets/2.png" title="CONQUEST LARGE OPERATION LOCKER" />
+        <MapComponent imageSrc="/assets/1.png" title="CONQUEST LARGE LANCANG DAM" />
+        <MapComponent imageSrc="/assets/2.png" title="CONQUEST LARGE OPERATION LOCKER" />
+        <MapComponent imageSrc="/assets/4.png" title="CONQUEST LARGE LANCANG DAM" />
+        <MapComponent imageSrc="/assets/1.png" title="CONQUEST LARGE DAWNBREAKER" />
+        <MapComponent imageSrc="/assets/3.png" title="CONQUEST LARGE PROPAGANDA" />
+
+      </div>
     </div>
   );
 }

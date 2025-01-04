@@ -25,13 +25,38 @@
     padding: 0;
   }
   
-  .server-info-content {
+  .server-info-content, .map-info {
     color: white;
     font-size: 18px; /* Sets the font size to 18px */
     font-weight: 300; /* Semi-bold font weight */
     margin: 0;
     padding: 0;
   }
+
+  .map-info {
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  .server-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    padding: 20px;
+  }
+  
+  .map-list {
+    display: grid;
+    grid-template-columns: repeat(4, 324px); /* Ensures 4 components in a row */
+    gap: 20px; /* Consistent spacing between components */
+    justify-content: flex-start; /* Align items to the start */
+  }
+  
+  .map-component {
+    width: 324px; /* Fixed width */
+    height: 178px; /* Fixed height */
+  }
+  
   
   .star-icon {
     margin-right: 8px; /* Adds space between the star and the number */
