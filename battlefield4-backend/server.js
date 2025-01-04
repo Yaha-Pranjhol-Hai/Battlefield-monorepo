@@ -4,19 +4,20 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://battlefield-monorepo-oklwgpj73-pranjal-jain-projects-a2a166e4.vercel.app'
+  'https://battlefield-monorepo-six.vercel.app'
 ];
 
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
+  credentials: true // Allows cookies to be sent
 }));
+
 
 
 // Move route to root level for Vercel

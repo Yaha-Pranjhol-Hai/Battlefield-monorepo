@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Stats from './Stats';
 import Button from './Button';
-export const API_URL = 'https://battlefield4-monorepo-backend.vercel.app';
+export const API_URL = process.env.REACT_APP_API_URL;
 
 export default function ServerInfo() {
   const [serverData, setServerData] = useState(null);
